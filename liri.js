@@ -25,6 +25,7 @@ var getTweets = function() {
   ) {
     if (!error) {
       for (var i = 0; i < 20; i++) {
+        console.log("**********");
         console.log(tweets[i].created_at);
         console.log(tweets[i].text);
         console.log("**********");
@@ -40,7 +41,7 @@ var spotify = new Spotify({
   secret: process.env.SPOTIFY_SECRET
 });
 
-spotify.getSong = function() {
+spotify.mySong = function() {
   console.log("got into");
   spotify.search({ type: "track", limit: 1, query: process.argv[3] }, function(
     err,
@@ -66,7 +67,7 @@ var pick = function(caseData, functionData) {
       console.log("here are your tweets");
       break;
     case "spotify-this-song":
-      spotify.getSong();
+      spotify.mySong();
       console.log("Play this song");
       break;
     case "movie-this":

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/grassyknoll88/liri#readme",
   "dependencies": {
+    "dot-env": "0.0.1",
     "dotenv": "^5.0.1",
     "file-system": "^2.2.2",
     "node-spotify-api": "^1.0.7",
